@@ -9,10 +9,10 @@ function TodoTable(props){
             <th scope = 'col'>#</th>
             <th scope = 'col'>Description</th>
             <th scope = 'col'>Priority</th>
-            <th scope = 'col'>Assigned</th>
             <th scope = 'col'>status</th>
-            <th scope = 'col'>Delete Row</th>
             <th scope = 'col'>Edit Row</th>
+            <th scope = 'col'>Move Row</th>
+            <th scope = 'col'>Delete Row</th>
 
           </tr>
         </thead>
@@ -25,10 +25,11 @@ function TodoTable(props){
             rownumber = {todo.rowNumber}
             rowdesc = {todo.rowDescription}
             rowpriority = {todo.priority}
-            rowass = {todo.rowAssigned}
             status = {todo.status}
             delete_todo = {props.delete_todo}
             onEdit={props.onEdit}
+            onMoveTodo={props.onMoveTodo}
+            selectedDate = {props.selectedDate}
             />
           ))}
     
