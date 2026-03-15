@@ -67,45 +67,45 @@ function TodoRowItem(props) {
 
   return (
     <tr>
-      <th scope="row">{props.rownumber}</th>
-      <td>{props.rowdesc}</td>
+      {/* <th scope="row">{props.rownumber}</th> */}
+      <td className="p-3">{props.rowdesc}</td>
       <td>{props.rowpriority}</td>
       <td>{props.status}</td>
 
       <td>
-        <button
-          className="btn btn-secondary"
-          onClick={() => props.onEdit(todo)}
-        >
-          <i className="bi bi-pencil"></i>
-        </button>
-      </td>
+  <div className="d-flex gap-2">
 
-      <td>
-        <OverlayTrigger
-          trigger="click"
-          placement="left"
-          show={showMovePopover}
-          overlay={movePopover}
-          rootClose={false}
-        >
-          <button
-            className="btn btn-secondary"
-            onClick={() => setShowMovePopover(!showMovePopover)}
-          >
-            <i className="bi bi-arrow-up-right-circle-fill"></i>
-          </button>
-        </OverlayTrigger>
-      </td>
+    <button
+      className="btn btn-secondary btn-sm"
+      onClick={() => props.onEdit(todo)}
+    >
+      <i className="bi bi-pencil"></i>
+    </button>
 
-      <td>
-        <button
-          className="btn btn-danger"
-          onClick={() => props.delete_todo(props.rownumber)}
-        >
-          <i className="bi bi-trash"></i>
-        </button>
-      </td>
+    <OverlayTrigger
+      trigger="click"
+      placement="left"
+      show={showMovePopover}
+      overlay={movePopover}
+      rootClose={false}
+    >
+      <button
+        className="btn btn-secondary btn-sm"
+        onClick={() => setShowMovePopover(!showMovePopover)}
+      >
+        <i className="bi bi-arrow-up-right-circle-fill"></i>
+      </button>
+    </OverlayTrigger>
+
+    <button
+      className="btn btn-danger btn-sm"
+      onClick={() => props.delete_todo(props.rownumber)}
+    >
+      <i className="bi bi-trash"></i>
+    </button>
+
+  </div>
+</td>
     </tr>
   );
 }

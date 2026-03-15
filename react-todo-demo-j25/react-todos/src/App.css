@@ -40,7 +40,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.28);
   z-index: -1;
 }
 .card {
@@ -99,4 +99,8 @@ body::before {
   to {
     transform: translate(120px, -120px);
   }
+}
+
+td .btn {
+  width: 36px;
 }

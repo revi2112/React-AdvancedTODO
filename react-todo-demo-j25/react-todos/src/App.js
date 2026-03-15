@@ -150,7 +150,7 @@ function App() {
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <>
         <Bg />
-        <div className="container-lg mt-5 pb-5">
+        <div className="container mt-5">
           <div className="row align-items-start g-4">
             <div className="col-3">
               <div className='card p-3'>
@@ -162,7 +162,7 @@ function App() {
               <div className='card'>
                 <div className='card-header'>
                   <div className="d-flex justify-content-between">
-                    <h5 className="mb-0">Your Todo's</h5>
+                    <h5 >Your Todo's</h5>
                     <div>
                       <DatePicker
                         value={selectedDate}
@@ -180,7 +180,7 @@ function App() {
             <div className="card" style={{ flex: 1 }}>
               <div className="card-body"> */}
 
-                  <TodoTable
+                  <TodoTable 
                     todo_list={visibleTodos}
                     delete_todo={delete_todo}
                     onEdit={handleEdit}

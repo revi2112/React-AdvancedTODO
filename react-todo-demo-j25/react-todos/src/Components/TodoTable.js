@@ -6,13 +6,14 @@ function TodoTable(props){
         <table className = 'table table-hover'>
         <thead>
           <tr>
-            <th scope = 'col'>#</th>
-            <th scope = 'col'>Description</th>
+            {/* <th scope = 'col'>#</th> */}
+            <th scope = 'col' className="p-2">Description</th>
             <th scope = 'col'>Priority</th>
-            <th scope = 'col'>status</th>
-            <th scope = 'col'>Edit Row</th>
+            <th scope = 'col'>Satus</th>
+            {/* <th scope = 'col'>Edit Row</th>
             <th scope = 'col'>Move Row</th>
-            <th scope = 'col'>Delete Row</th>
+            <th scope = 'col'>Delete Row</th> */}
+            <th>Actions</th>
 
           </tr>
         </thead>
